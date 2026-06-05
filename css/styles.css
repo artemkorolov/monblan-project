@@ -1,3 +1,14 @@
+:root {
+	--color-bg-main: #FAFAFA;
+	--color-text-dark: #000000;
+	--color-text-muted: #636264;
+	--color-accent-blue: #3b82f6;
+	--color-bg-card: #FFFFFF;
+	--color-border: #D9D9D9;
+	--color-btn-gray: #929292;
+	--color-btn-hover: #EEEEEE;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -6,8 +17,8 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-	background-color: #FAFAFA;
-	color: #000000;
+	background-color: var(--color-bg-main);
+	color: var(--color-text-dark);
 }
 
 .main-bg-decor {
@@ -82,8 +93,8 @@ body {
 .date-start {
 	font-size: 13px;
 	font-weight: 400;
-	color: #3b82f6;
-	border: 1px solid #3b82f6;
+	color: var(--color-accent-blue);
+	border: 1px solid var(--color-accent-blue);
 	padding: 6px 12px;
 	border-radius: 2px;
 }
@@ -117,7 +128,7 @@ body {
 
 .view-rows .card {
 	display: flex;
-	background-color: #FFFFFF;
+	background-color: var(--color-bg-card);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
 	overflow: hidden;
 	align-items: center;
@@ -168,7 +179,7 @@ body {
 .stats-date {
 	font-size: 16px;
 	font-weight: 500;
-	color: #000000;
+	color: var(--color-text-dark);
 }
 
 .view-rows .metrics {
@@ -180,7 +191,7 @@ body {
 .view-rows .metric-item {
 	font-size: 13px;
 	font-weight: 400;
-	color: #000000;
+	color: var(--color-text-dark);
 	display: inline-flex;
 	align-items: center;
 	gap: 6px;
@@ -190,8 +201,8 @@ body {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 14px;
-	height: 14px;
+	width: 18px;
+	height: 18px;
 }
 
 .view-rows .metric-item .icon img {
@@ -227,9 +238,9 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 11px;
 	font-weight: 500;
-	color: #929292;
+	color: var(--color-btn-gray);
 	background-color: transparent;
-	border: 1px solid #929292;
+	border: 1px solid var(--color-btn-gray);
 	padding: 8px 27px;
 	border-radius: 14px;
 	cursor: pointer;
@@ -238,9 +249,9 @@ body {
 }
 
 .load-more-bnt:hover {
-	background-color: #EEEEEE;
-	color: #000000;
-	border-color: #999999;
+	background-color: var(--color-btn-hover);
+	color: var(--color-text-dark);
+	border-color: var(--color-btn-gray);
 }
 
 .view-options-bar {
@@ -332,7 +343,6 @@ body {
 		justify-content: space-between;
 		align-items: center;
 		min-width: auto;
-		border-bottom: 1px solid #F5F5F5;
 		padding-bottom: 8px;
 	}
 
@@ -387,7 +397,7 @@ body {
 .view-tiles .card {
 	display: flex;
 	flex-direction: column;
-	background-color: #FFFFFF;
+	background-color: var(--color-bg-card);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
 	overflow: hidden;
 	align-items: stretch;
@@ -430,6 +440,17 @@ body {
 	gap: 6px;
 }
 
+.view-tiles .metric-item {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.view-tiles .metric-item .icon {
+	display: flex;
+	align-items: center;
+}
+
 .view-tiles .block-archive .metrics {
 	align-items: flex-end;
 }
@@ -449,7 +470,7 @@ body {
 .view-tiles .status-title {
 	font-size: 14px;
 	font-weight: 500;
-	color: #000000;
+	color: var(--color-text-dark);
 }
 
 .view-tiles .status-date {
@@ -503,7 +524,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-weight: 500;
-	color: #000000;
+	color: var(--color-text-dark);
 }
 
 .datepicker-inner {
@@ -515,8 +536,8 @@ body {
 .date-compound-input {
 	display: flex;
 	align-items: stretch;
-	background-color: #FFFFFF;
-	border: 1px solid #D9D9D9;
+	background-color: var(--color-bg-card);
+	border: 1px solid var(--color-border);
 	border-radius: 4px;
 	overflow: hidden;
 }
@@ -525,7 +546,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 13px;
 	font-weight: 400;
-	color: #636264;
+	color: var(--color-text-muted);
 	border: none;
 	background: none;
 	padding: 0 12px;
@@ -538,9 +559,8 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #F0F0F0;
 	border: none;
-	border-left: 1px solid #D9D9D9;
+	border-left: 1px solid var(--color-border);
 	width: 24px;
 	height: 24px;
 	cursor: pointer;
@@ -549,7 +569,7 @@ body {
 }
 
 .date-compound-input button:hover {
-	background-color: #E2E2E2;
+	background-color: var(--color-bg-main);
 }
 
 .date-compound-input button img {
@@ -559,7 +579,7 @@ body {
 }
 
 .date-compound-input:focus-within {
-	border-color: #3b82f6;
+	border-color: var(--color-accent-blue);
 }
 
 /*===(Media Queries Datepicker) ===*/
