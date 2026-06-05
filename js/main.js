@@ -60,3 +60,34 @@ if (typeof initCalendar === 'function') {
 	document.getElementById('clear-from')?.addEventListener('click', () => pickerFrom?.clear());
 	document.getElementById('clear-to')?.addEventListener('click', () => pickerTo?.clear());
 }
+
+// LOAD MORE
+const loadMoreBtn = document.getElementById('load-more-btn');
+const mainContainerEl = document.getElementById('main-container');
+const allCards = mainContainerEl ? Array.from(mainContainerEl.querySelectorAll('.card')) : [];
+
+const CARDS_TO_SHOW = 6;
+let currentVisibleCount = CARDS_TO_SHOW;
+
+function updateCardsVisibility() {
+	allCards.forEach((card, index) => {
+		if (index < currentVisibleCount) {
+			card.classList.remove('is-hidden');
+		} else {
+			card.classList.add('is-hidden');
+		}
+	});
+
+	if (currentVisibleCount >= allCards.length && loadMoreBtn) {
+		loadMoreBtn.style.display = 'none';
+	}
+}
+
+if (allCards.length > 0) {
+	updateCardsVisibility();
+}
+
+loadMoreBtn?.addEventListener('click', () => {
+	currentVisibleCount += 4;
+	updateCardsVisibility();
+});
