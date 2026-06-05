@@ -284,6 +284,10 @@ body {
 	filter: invert(40%) opacity(0.8);
 }
 
+.card.is-hidden {
+	display: none !important;
+}
+
 /*=== (Media Queries) ===*/
 
 @media (max-width: 768px) {
