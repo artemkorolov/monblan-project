@@ -12,6 +12,7 @@
 		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap"
 		rel="stylesheet">
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -40,8 +41,28 @@
 				</ul>
 
 				<div class="profile-filter">
-					<div class="datepicker-inner">
+					<span class="filter-label">Date</span>
 
+					<div class="datepicker-inner">
+						<div class="date-compound-input" id="picker-from-wrapper">
+							<input type="text" id="date-from" placeholder="from" readonly>
+							<button type="button" class="btn-clear" id="clear-from" title="Clear">
+								<img src="img/close.svg" alt="✕">
+							</button>
+							<button type="button" class="btn-calendar" id="trigger-from" title="Open calendar">
+								<img src="img/calendar.svg" alt="📅">
+							</button>
+						</div>
+					</div>
+
+					<div class="date-compound-input" id="picker-to-wrapper">
+						<input type="text" id="date-to" placeholder="to" readonly>
+						<button type="button" class="btn-clear" id="clear-to" title="Clear">
+							<img src="img/close.svg" alt="✕">
+						</button>
+						<button type="button" class="btn-calendar" id="trigger-to" title="Open calendar">
+							<img src="img/calendar.svg" alt="calendar">
+						</button>
 					</div>
 				</div>
 			</div>
@@ -52,10 +73,10 @@
 		<div class="view-options-bar">
 			<div class="btn-view">
 				<button id="btn-tiles" class="toggle-btn" title="Tiles View">
-					<img src="img/rows.svg" alt="Tiles">
+					<img src="img/grid.svg" alt="Tiles">
 				</button>
 				<button id="btn-rows" class="toggle-btn active" title="Rows View">
-					<img src="img/grid.svg" alt="Rows">
+					<img src="img/rows.svg" alt="Rows">
 				</button>
 			</div>
 		</div>
@@ -548,6 +569,7 @@
 
 	</main>
 
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 	<script src="js/main.js"></script>
 </body>
 
